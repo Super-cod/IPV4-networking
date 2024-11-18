@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #343a40;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.output {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #e9ecef;
+    background: #e9f5ff;
+    border-radius: 8px;
+}
+.output h3 {
+    margin-top: 0;
+    color: #0056b3;
+}
+.error {
+    color: #dc3545;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.tab.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+.network-info {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.subnet-details {
+    margin-top: 20px;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 5px;
+}
+.subnet-table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+.subnet-table th, .subnet-table td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+    text-align: left;
+}
+.subnet-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+.subnet-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+.highlight {
+    background-color: #e7f3ff;
+    padding: 2px 5px;
+    border-radius: 3px;
+}

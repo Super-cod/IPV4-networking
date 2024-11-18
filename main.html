@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced IP Address Management Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>IP Address Management Tool</h1>
+        <div class="form-group">
+            <label for="inputType">Select Input Type:</label>
+            <select id="inputType" onchange="resetInputs()">
+                <option value="DEC">DEC (Decimal)</option>
+                <option value="BIN">BIN (Binary)</option>
+                <option value="OCT">OCT (Octal)</option>
+                <option value="HEX">HEX (Hexadecimal)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="ipInput">Enter IP Address (in Selected Format):</label>
+            <input type="text" id="ipInput" placeholder="e.g., 192.168.1.0 or equivalent">
+            <div id="ipError" class="error"></div>
+        </div>
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('subnetting')">Subnetting</div>
+            <div class="tab" onclick="switchTab('supernetting')">Supernetting</div>
+        </div>
+        <div id="subnetting" class="tab-content active">
+            <h2>Subnetting</h2>
+            <div class="form-group">
+                <label for="numSubnets">Number of Subnets:</label>
+                <input type="number" id="numSubnets" placeholder="e.g., 4" min="1">
+                <div id="subnetError" class="error"></div>
+            </div>
+            <button onclick="calculateSubnet()">Calculate Subnets</button>
+            <div id="subnetOutput" class="output" style="display: none;">
+                <h3>Subnetting Results</h3>
+                <div id="subnetResults"></div>
+            </div>
+        </div>
+        <div id="supernetting" class="tab-content">
+            <h2>Supernetting</h2>
+            <div class="form-group">
+                <label for="numNetworks">Enter Number of Networks to Combine:</label>
+                <input type="number" id="numNetworks" placeholder="e.g., 3" min="2">
+                <div id="networkError" class="error"></div>
+                <button onclick="generateNetworkInputs()">Generate Input Boxes</button>
+            </div>
+            <div id="networkInputs"></div>
+            <button id="calculateSupernetBtn" onclick="calculateSupernet()" style="display:none;">Calculate Supernet</button>
+            <div id="supernetOutput" class="output" style="display: none;">
+                <h3>Supernetting Results</h3>
+                <div id="supernetResults"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
